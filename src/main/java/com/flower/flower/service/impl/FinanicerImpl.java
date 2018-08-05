@@ -12,7 +12,8 @@ public class FinanicerImpl implements FinanicerBL {
 
     @Override
     public ResultMessage release_product(String rate_of_retrun, String interest, String period_return, String least_investment_amount) {
-        return null;
+        return ResultMessage.EMPTY;
+
     }
 
     @Override
