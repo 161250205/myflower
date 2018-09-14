@@ -11,4 +11,5 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @AllArgsConstructor
 public class financier extends user {
+    String special;
 }
