@@ -62,6 +62,10 @@
                 key: 'time'
               },
               {
+                title: '截止时间',
+                key: 'time_end'
+              },
+              {
                 title:'查看详情',
                 width: 150,
                 align: 'center',
@@ -91,30 +95,35 @@
                 rate_of_return:"123",
                 risk:"321",
                 time:"123",
+                time_end:"123",
               },
               {
                 name:"产品2",
                 rate_of_return:"123",
                 risk:"321",
                 time:"123",
+                time_end:"123",
               },
               {
                 name:"产品3",
                 rate_of_return:"123",
                 risk:"321",
                 time:"123",
+                time_end:"123",
               },
               {
                 name:"产品4",
                 rate_of_return:"123",
                 risk:"321",
                 time:"123",
+                time_end:"123",
               },
               {
                 name:"产品5",
                 rate_of_return:"123",
                 risk:"321",
                 time:"123",
+                time_end:"123",
               },
             ]
           }

@@ -26,7 +26,7 @@
             this.intro = intro
           },
           jump(){
-            // this.$router.push('/');
+            this.$router.push('/invest_info');
           }
       }
     }

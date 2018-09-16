@@ -3,30 +3,50 @@
     <FormItem label="产品名称：" prop="product_name">
       <i-input clearable type="text" placeholder="请输入产品名称" class="item" style="max-width: 60%;"></i-input>
     </FormItem>
+    <!--<editor/>-->
     <FormItem label="产品类别：" prop="type">
       <RadioGroup v-model="type" class="item">
+        <Radio label="金融">
+          <Icon type="logo-yen" />
+          <span>金融</span>
+        </Radio>
         <Radio label="科技">
+          <Icon type="ios-pulse-outline" />
           <span>科技</span>
         </Radio>
         <Radio label="家电">
+          <Icon type="ios-film" />
           <span>家电</span>
         </Radio>
         <Radio label="美食">
+          <Icon type="logo-windows"></Icon>
           <span>美食</span>
         </Radio>
         <Radio label="设计">
+          <Icon type="ios-document-outline" />
           <span>设计</span>
         </Radio>
         <Radio label="文化">
+          <Icon type="ios-bookmarks" />
           <span>文化</span>
         </Radio>
         <Radio label="公益">
+          <Icon type="ios-water" />
           <span>公益</span>
         </Radio>
         <Radio label="娱乐">
+          <Icon type="ios-musical-notes" />
           <span>娱乐</span>
         </Radio>
       </RadioGroup>
+    </FormItem>
+    <FormItem label="信息图片：" prop="pic_info">
+      <Upload
+        class="item_select"
+        multiple
+        action="//jsonplaceholder.typicode.com/posts/">
+        <Button icon="ios-cloud-upload-outline">上传信息图片</Button>
+      </Upload>
     </FormItem>
     <FormItem label="产品简介：" prop="product_intro">
       <i-input clearable type="textarea" :rows="3" placeholder="请输入产品简介" class="item" style="max-width: 60%;"></i-input>
@@ -45,7 +65,15 @@
       <InputNumber  :max="100" :min="0" :step="0.0001"  style="width:auto"  class="item_input" ></InputNumber>
     </FormItem>
     <FormItem label="偿债能力：" prop="ability">
-      <i-input clearable type="text" placeholder="" class="item" style="max-width: 60%;"></i-input>
+      <Upload
+        class="item_select"
+        multiple
+        action="//jsonplaceholder.typicode.com/posts/">
+        <Button icon="ios-cloud-upload-outline">上传资格文件</Button>
+      </Upload>
+    </FormItem>
+    <FormItem label="结束时间：" prop="time_end">
+      <DatePicker type="date" placeholder="Select date" style="width: 200px" class="item_select"></DatePicker>
     </FormItem>
     <FormItem label="偿债时间：" prop="time_return_expect">
       <Select v-model="model1" style="width:200px" class="item_select" placeholder="">
@@ -59,11 +87,15 @@
 </template>
 
 <script>
+  import editor from "../../page_part/financier/editor"
 
     export default {
         name: "financier_start_new_project",
+      components:{editor},
       data(){
           return {
+            model1:"",
+            model2:"",
             time_list: [
               {
                 value: '1',

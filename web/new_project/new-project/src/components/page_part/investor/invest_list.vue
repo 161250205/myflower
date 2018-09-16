@@ -25,6 +25,29 @@
             {
               title: '收益',
               key: 'return_until_now'
+            },
+            {
+              title: '查看详情',
+              width: 150,
+              align: 'center',
+              render: (h, params) => {
+                return h('div', [
+                  h('Button', {
+                    props: {
+                      type: 'primary',
+                      size: 'small'
+                    },
+                    style: {
+                      marginRight: '5px'
+                    },
+                    on: {
+                      click: () => {
+                        // this.show_project_info(params.index)
+                      }
+                    }
+                  }, '详情')
+                ]);
+              },
             }
           ],
           data2: [

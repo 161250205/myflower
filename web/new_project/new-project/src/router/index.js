@@ -7,6 +7,7 @@ import home_page from '../components/maincomps/home_page'
 import financier_main from '../components/maincomps/financier/financier_main'
 import investor_main from '../components/maincomps/investor/investor_main'
 import investor_user_center from '../components/maincomps/investor/investor_user_center'
+import invest_info from '../components/maincomps/investor/invest_info'
 import financier_user_center from '../components/maincomps/financier/financier_user_center'
 //login_investor
 //financier_main
@@ -14,6 +15,11 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/invest_info',
+      name: 'invest_info',
+      component:invest_info
+    },
     {
       path: '/',
       name: 'home_page',
@@ -48,6 +54,7 @@ export default new Router({
       path: '/investor_user_center',
       name: 'investor_user_center',
       component: investor_user_center
-    }
+    },
+
   ]
 })
